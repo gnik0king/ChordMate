@@ -1,0 +1,28 @@
+Requirements:
+    -Root notes and chord types
+    -Visualizations
+    -Playback using MIDI or audio library
+    -Optional: chaining, saving, and sharing chords
+
+Design UI:
+    -Dropdown menu design for root note and chord type
+    -Visualization layout
+    -Playback button and additional controls
+
+Build core funtionality:
+    -Chord selection logic
+    -Chord data storage and retrieval
+    -Audio Playback
+
+Enhance app:
+    -Add features (chaining chords and exporting)
+    -Optimize for different devices
+
+Test & Deploy:
+    -Test on web & mobile
+    -Deploy to app storage
+
+Completed product:
+    -Web program
+    -Apple
+    -Android
