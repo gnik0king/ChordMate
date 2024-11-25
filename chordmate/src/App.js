@@ -10,11 +10,11 @@ function App(){
   const [chordType, setChordType] = useState("major");
 
   const handlePlayChord = () => {
-    const chordNotes = chords[rootNote][chordType];
+    const chordNotes = chords[rootNote][chordType].map(note => `${note}4`); // Default to octave 4
     const synth = new Tone.PolySynth().toDestination();
-    synth.triggerAttackRelease(chordNotes, "1n");
-    console.log(`Playing: ${chordNotes.join(", ")}`);
+    synth.triggerAttackRelease(chordNotes, 5); // Play chord for 5 seconds
   };
+  
 
   return(
     <div>
