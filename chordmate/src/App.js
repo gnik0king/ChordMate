@@ -17,18 +17,18 @@ function App(){
   
 
   return(
-    <div>
+    <div className="page">
       <h1>
         ChordMate
       </h1>
       <Dropdown
-        label="Root Note"
+        label="Root Note: "
         options={Object.keys(chords)}
         value={rootNote}
         onChange={setRootNote}
       />
       <Dropdown
-        label="Chord Type"
+        label="Chord Type: "
         options={Object.keys(chords[rootNote])}
         value={chordType}
         onChange={setChordType}
