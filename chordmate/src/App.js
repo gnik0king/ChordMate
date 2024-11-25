@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import * as Tone from "tone";
 import ChordVisualizer from "./components/ChordVisualizer";
 import Dropdown from "./components/Dropdown";
 import PlayButton from "./components/PlayButton";
+import chords from "./data/chords.json";
 
 function App(){
   const [rootNote, setRootNote] = useState("C");
@@ -9,7 +11,9 @@ function App(){
 
   const handlePlayChord = () => {
     const chordNotes = chords[rootNote][chordType];
-    console.log('Playing: ${chordNotes.join(", ")}');
+    const synth = new Tone.PolySynth().toDestination();
+    synth.triggerAttackRelease(chordNotes, "1n");
+    console.log(`Playing: ${chordNotes.join(", ")}`);
   };
 
   return(
