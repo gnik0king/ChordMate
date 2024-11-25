@@ -1,0 +1,111 @@
+{
+    "C": {
+      "major": ["C", "E", "G"],
+      "minor": ["C", "Eb", "G"],
+      "diminished": ["C", "Eb", "Gb"],
+      "augmented": ["C", "E", "G#"],
+      "major7": ["C", "E", "G", "B"],
+      "dominant7": ["C", "E", "G", "Bb"],
+      "minor7": ["C", "Eb", "G", "Bb"]
+    },
+    "C#": {
+      "major": ["C#", "F", "G#"],
+      "minor": ["C#", "E", "G#"],
+      "diminished": ["C#", "E", "G"],
+      "augmented": ["C#", "F", "A"],
+      "major7": ["C#", "F", "G#", "C"],
+      "dominant7": ["C#", "F", "G#", "B"],
+      "minor7": ["C#", "E", "G#", "B"]
+    },
+    "D": {
+      "major": ["D", "F#", "A"],
+      "minor": ["D", "F", "A"],
+      "diminished": ["D", "F", "G#"],
+      "augmented": ["D", "F#", "A#"],
+      "major7": ["D", "F#", "A", "C#"],
+      "dominant7": ["D", "F#", "A", "C"],
+      "minor7": ["D", "F", "A", "C"]
+    },
+    "Eb": {
+      "major": ["Eb", "G", "Bb"],
+      "minor": ["Eb", "Gb", "Bb"],
+      "diminished": ["Eb", "Gb", "A"],
+      "augmented": ["Eb", "G", "B"],
+      "major7": ["Eb", "G", "Bb", "D"],
+      "dominant7": ["Eb", "G", "Bb", "Db"],
+      "minor7": ["Eb", "Gb", "Bb", "Db"]
+    },
+    "E": {
+      "major": ["E", "G#", "B"],
+      "minor": ["E", "G", "B"],
+      "diminished": ["E", "G", "Bb"],
+      "augmented": ["E", "G#", "C"],
+      "major7": ["E", "G#", "B", "D#"],
+      "dominant7": ["E", "G#", "B", "D"],
+      "minor7": ["E", "G", "B", "D"]
+    },
+    "F": {
+      "major": ["F", "A", "C"],
+      "minor": ["F", "Ab", "C"],
+      "diminished": ["F", "Ab", "B"],
+      "augmented": ["F", "A", "C#"],
+      "major7": ["F", "A", "C", "E"],
+      "dominant7": ["F", "A", "C", "Eb"],
+      "minor7": ["F", "Ab", "C", "Eb"]
+    },
+    "F#": {
+      "major": ["F#", "A#", "C#"],
+      "minor": ["F#", "A", "C#"],
+      "diminished": ["F#", "A", "C"],
+      "augmented": ["F#", "A#", "D"],
+      "major7": ["F#", "A#", "C#", "E#"],
+      "dominant7": ["F#", "A#", "C#", "E"],
+      "minor7": ["F#", "A", "C#", "E"]
+    },
+    "G": {
+      "major": ["G", "B", "D"],
+      "minor": ["G", "Bb", "D"],
+      "diminished": ["G", "Bb", "Db"],
+      "augmented": ["G", "B", "D#"],
+      "major7": ["G", "B", "D", "F#"],
+      "dominant7": ["G", "B", "D", "F"],
+      "minor7": ["G", "Bb", "D", "F"]
+    },
+    "Ab": {
+      "major": ["Ab", "C", "Eb"],
+      "minor": ["Ab", "B", "Eb"],
+      "diminished": ["Ab", "B", "D"],
+      "augmented": ["Ab", "C", "E"],
+      "major7": ["Ab", "C", "Eb", "G"],
+      "dominant7": ["Ab", "C", "Eb", "Gb"],
+      "minor7": ["Ab", "B", "Eb", "Gb"]
+    },
+    "A": {
+      "major": ["A", "C#", "E"],
+      "minor": ["A", "C", "E"],
+      "diminished": ["A", "C", "Eb"],
+      "augmented": ["A", "C#", "F"],
+      "major7": ["A", "C#", "E", "G#"],
+      "dominant7": ["A", "C#", "E", "G"],
+      "minor7": ["A", "C", "E", "G"]
+    },
+    "Bb": {
+      "major": ["Bb", "D", "F"],
+      "minor": ["Bb", "Db", "F"],
+      "diminished": ["Bb", "Db", "E"],
+      "augmented": ["Bb", "D", "F#"],
+      "major7": ["Bb", "D", "F", "A"],
+      "dominant7": ["Bb", "D", "F", "Ab"],
+      "minor7": ["Bb", "Db", "F", "Ab"]
+    },
+    "B": {
+      "major": ["B", "D#", "F#"],
+      "minor": ["B", "D", "F#"],
+      "diminished": ["B", "D", "F"],
+      "augmented": ["B", "D#", "G"],
+      "major7": ["B", "D#", "F#", "A#"],
+      "dominant7": ["B", "D#", "F#", "A"],
+      "minor7": ["B", "D", "F#", "A"]
+    }
+  }
+  
