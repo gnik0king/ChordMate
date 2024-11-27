@@ -2,30 +2,45 @@ import React from "react";
 import "./Piano.css";
 
 function Piano({ notes }) {
-  // Define piano keys from C to B
-  const allKeys = [
-    "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
-  ];
-
-  // Map sharps to flats for easier detection
-  const flatMapping = {
-    "C#": "Db",
-    "D#": "Eb",
-    "F#": "Gb",
-    "G#": "Ab",
-    "A#": "Bb"
+  // Define white keys and their corresponding black keys
+  const whiteKeys = ["C", "D", "E", "F", "G", "A", "B"];
+  const blackKeys = {
+    "C": "C#", // Black key after C
+    "D": "D#", // Black key after D
+    "F": "F#", // Black key after F
+    "G": "G#", // Black key after G
+    "A": "A#"  // Black key after A
   };
+
+  // Mapping for flat notes to their sharp equivalents
+  const flatToSharp = {
+    "Db": "C#",
+    "Eb": "D#",
+    "Gb": "F#",
+    "Ab": "G#",
+    "Bb": "A#"
+  };
+
+  // Convert flat notes to their sharp equivalents
+  const convertedNotes = notes.map(note => flatToSharp[note] || note);
 
   return (
     <div className="piano">
-      {allKeys.map((key) => (
+      {whiteKeys.map((key) => (
         <div
           key={key}
-          className={`key ${key.includes("#") ? "black" : "white"} ${
-            notes.includes(key) || notes.includes(flatMapping[key]) ? "active" : ""
-          }`}
+          className={`key white ${convertedNotes.includes(key) ? "active" : ""}`}
         >
-          {key}
+          {convertedNotes.includes(key) && <span className="key-label">{key}</span>}
+          {blackKeys[key] && (
+            <div
+              className={`key black ${convertedNotes.includes(blackKeys[key]) ? "active" : ""}`}
+            >
+              {convertedNotes.includes(blackKeys[key]) && (
+                <span className="key-label">{blackKeys[key]}</span>
+              )}
+            </div>
+          )}
         </div>
       ))}
     </div>
