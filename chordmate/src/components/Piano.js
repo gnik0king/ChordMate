@@ -21,23 +21,41 @@ function Piano({ notes }) {
     "Bb": "A#"
   };
 
-  // Convert flat notes to their sharp equivalents
-  const convertedNotes = notes.map(note => flatToSharp[note] || note);
+  // Reverse mapping to recover the original note
+  const sharpToFlat = Object.fromEntries(
+    Object.entries(flatToSharp).map(([flat, sharp]) => [sharp, flat])
+  );
+
+  // Convert flat notes to sharps for matching and keep the original key
+  const convertedNotes = notes.map(note => ({
+    original: note, // Store the original note (e.g., Db)
+    sharp: flatToSharp[note] || note // Convert to sharp if needed
+  }));
+
+  // Check if a key is active based on the sharp conversion
+  const isActive = (key) =>
+    convertedNotes.some(note => note.sharp === key);
+
+  // Get the original note for a given key
+  const getOriginalNote = (key) => {
+    const match = convertedNotes.find(note => note.sharp === key);
+    return match ? match.original : null;
+  };
 
   return (
     <div className="piano">
       {whiteKeys.map((key) => (
         <div
           key={key}
-          className={`key white ${convertedNotes.includes(key) ? "active" : ""}`}
+          className={`key white ${isActive(key) ? "active" : ""}`}
         >
-          {convertedNotes.includes(key) && <span className="key-label">{key}</span>}
+          {isActive(key) && <span className="key-label">{getOriginalNote(key)}</span>}
           {blackKeys[key] && (
             <div
-              className={`key black ${convertedNotes.includes(blackKeys[key]) ? "active" : ""}`}
+              className={`key black ${isActive(blackKeys[key]) ? "active" : ""}`}
             >
-              {convertedNotes.includes(blackKeys[key]) && (
-                <span className="key-label">{blackKeys[key]}</span>
+              {isActive(blackKeys[key]) && (
+                <span className="key-label">{getOriginalNote(blackKeys[key])}</span>
               )}
             </div>
           )}
