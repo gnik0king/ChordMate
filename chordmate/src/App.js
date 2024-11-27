@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as Tone from "tone";
 import ChordVisualizer from "./components/ChordVisualizer";
 import Dropdown from "./components/Dropdown";
+import Piano from "./components/Piano";
 import PlayButton from "./components/PlayButton";
 import chords from "./data/chords.json";
 
@@ -34,6 +35,7 @@ function App(){
         onChange={setChordType}
       />
       <ChordVisualizer notes={chords[rootNote][chordType]}/>
+      <Piano notes={chords[rootNote][chordType]}/>
       <PlayButton onClick={handlePlayChord}/>
     </div>
   );
