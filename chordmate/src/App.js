@@ -1,28 +1,26 @@
 import React, { useState } from "react";
 import * as Tone from "tone";
-import ChordVisualizer from "./components/ChordVisualizer";
 import Dropdown from "./components/Dropdown";
 import Piano from "./components/Piano";
 import PlayButton from "./components/PlayButton";
 import chords from "./data/chords.json";
 import './index.css';
 
-function App(){
+function App() {
   const [rootNote, setRootNote] = useState("C");
   const [chordType, setChordType] = useState("major");
 
   const handlePlayChord = () => {
-    const chordNotes = chords[rootNote][chordType].map(note => `${note}4`); // Default to octave 4
+    const chordNotes = chords[rootNote][chordType];
     const synth = new Tone.PolySynth().toDestination();
-    synth.triggerAttackRelease(chordNotes, 5); // Play chord for 5 seconds
+    synth.triggerAttackRelease(chordNotes, 5);
   };
-  
 
-  return(
-    <div className="body">
-      <h1>
-        ChordMate
-      </h1>
+  const chordNotes = chords[rootNote][chordType];
+
+  return (
+    <div className="center">
+      <h1>ChordMate</h1>
       <Dropdown
         label="Root Note: "
         options={Object.keys(chords)}
@@ -35,11 +33,13 @@ function App(){
         value={chordType}
         onChange={setChordType}
       />
-      <ChordVisualizer notes={chords[rootNote][chordType]}/>
-      <Piano notes={chords[rootNote][chordType]}/>
-      <PlayButton onClick={handlePlayChord}/>
+      <h3>Chord Notes</h3>
+      <p>{chordNotes.join(" - ")}</p>
+      <Piano notes={chordNotes} />
+      <PlayButton onClick={handlePlayChord} />
     </div>
   );
 }
+
 
 export default App;
