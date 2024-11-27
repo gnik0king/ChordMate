@@ -5,6 +5,7 @@ import Dropdown from "./components/Dropdown";
 import Piano from "./components/Piano";
 import PlayButton from "./components/PlayButton";
 import chords from "./data/chords.json";
+import './index.css';
 
 function App(){
   const [rootNote, setRootNote] = useState("C");
@@ -18,7 +19,7 @@ function App(){
   
 
   return(
-    <div className="page">
+    <div className="body">
       <h1>
         ChordMate
       </h1>

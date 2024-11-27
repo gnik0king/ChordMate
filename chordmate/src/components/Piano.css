@@ -1,6 +1,7 @@
 .piano {
     display: flex;
     position: relative;
+    align-items: center;
     width: 360px; /* Adjust as needed */
     margin: 20px auto;
     height: 150px;
