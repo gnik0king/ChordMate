@@ -1,5 +1,5 @@
 import React from "react";
-import "./Piano.css";
+import "./PianoPage.css";
 
 function Piano({ notes }) {
   // Define white keys and their corresponding black keys
